@@ -1,0 +1,17 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- Decorador Input: para mandar listado de personajes a dbz-list -->
+    <dbz-list 
+      [characterList]="characters"
+      (deleteCharacterByUid)="onDeleteCharacter($event)"
+    >
+    </dbz-list>
+  </div>
+  <div class="col">
+    <!-- Decorador Output para agregar un personajes al main-page-component -->
+    <dbz-add-character (onNewCharacter)="onSaveCharacter($event)"></dbz-add-character>
+  </div>
+</div>
